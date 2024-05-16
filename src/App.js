@@ -1,20 +1,20 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import TextComponent from "./Components/TextComponent";
-import ImageCompo from "./Components/ImageCompo";
+import Hero from "./Pages/Hero";
+import { Routes, Route } from "react-router-dom";
+import About from "./Pages/About";
+import ContactUs from "./Pages/ContactUs";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <div className="row w-100 container-fluid mx-auto">
-        <div className="col-11 col-md-6 col-lg-6">
-          <TextComponent />
-        </div>
-        <div className="col-11 col-md-6 col-lg-6">
-          <ImageCompo />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
     </div>
   );
 };
