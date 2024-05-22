@@ -23,9 +23,17 @@ const Navbar = () => {
 
       <div className="d-flex align-items-center gap-5">
         <Link to="/">Home</Link>
-        <Link to="/about-us">About Us</Link>
+        <div className="parent">
+          <Link to="/about-us">About Us</Link>
+          <div className="dropContent d-grid gap-1 card shadow p-3">
+            <p>Home</p>
+            <p>Home</p>
+            <p>Home</p>
+          </div>
+        </div>
         <Link to={"/contact-us"}>Contact Us</Link>
         <Link to={"/services"}>Services</Link>
+        <Link to={"/products"}>Products</Link>
       </div>
 
       <div className="d-flex align-items-center gap-5">

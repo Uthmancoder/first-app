@@ -6,6 +6,9 @@ import ContactUs from "./Pages/ContactUs";
 import PageNotFound from "./Pages/PageNotFound";
 import Services from "./Pages/Services";
 import Description from "./Pages/Description";
+import Product from "./Pages/Product";
+import AllProducts from "./Components/AllProducts";
+import FilteredProducts from "./Components/FilteredProducts";
 
 const App = () => {
   return (
@@ -14,9 +17,12 @@ const App = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/services" element={<Services />}>
-          <Route path=":id" element={<Description />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/products" element={<Product />}>
+          <Route index element={<AllProducts />} />
+          <Route path="filtered-product" element={<FilteredProducts />} />
         </Route>
+        <Route path="/services/:id" element={<Description />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

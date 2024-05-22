@@ -1,8 +1,14 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import { products } from "../Components/server";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+  const ViewMore = (id) => {
+    console.log("Id of procuct Clicked : ", id);
+    navigate(`/services/${id}`);
+  };
   return (
     <div>
       <Navbar />
@@ -14,7 +20,12 @@ const Services = () => {
             <h4>{data.productName}</h4>
             <h5>#{data.productPrice}</h5>
             <div className="d-flex align-items-center gap-2 justify-content-between ">
-              <button className="btn btn alert alert-success">View More</button>
+              <button
+                onClick={() => ViewMore(data.id)}
+                className="btn btn alert alert-success"
+              >
+                View More
+              </button>
               <button className="btn btn alert alert-primary">
                 Add To Cart
               </button>
