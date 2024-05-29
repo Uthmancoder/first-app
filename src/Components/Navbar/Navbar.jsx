@@ -34,6 +34,7 @@ const Navbar = () => {
         <Link to={"/contact-us"}>Contact Us</Link>
         <Link to={"/services"}>Services</Link>
         <Link to={"/products"}>Products</Link>
+        <Link to={"/my-products"}>My Product </Link>
       </div>
 
       <div className="d-flex align-items-center gap-5">

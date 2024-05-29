@@ -1,0 +1,31 @@
+{
+    "AllProducts" : [
+        {
+            "id" : 1,
+            "productName" : "Men's T-Shirt",
+            "productPrice" : 10000,
+            "productCategory" : "Men's Wear",
+            "productDescription" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere, ullam tenetur iure dolor magni distinctio eaque quae magnam, excepturi modi blanditiis aliquid repellat sapiente aspernatur sint sequi natus cupiditate.",
+            "productImage" : "https://media.istockphoto.com/id/864505242/photo/mens-clothing-and-personal-accessories.jpg?s=612x612&w=0&k=20&c=TaJuW3UY9IZMijRrj1IdJRwd6iWzXBlrZyQd1uyBzEY=",
+            "color" : "gray"
+        },
+        {
+            "id" : 2,
+            "productName" : "Women's Gown",
+            "productPrice" : 5000,
+            "productCategory" : "Women's Wear",
+            "productDescription" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere, ullam tenetur iure dolor magni distinctio eaque quae magnam, excepturi modi blanditiis aliquid repellat sapiente aspernatur sint sequi natus cupiditate.",
+            "productImage" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR15E-EXhdfD-RogE5rsV4JmUMHM_wGlqEHzQ&s",
+            "color" : "gray"
+        },
+        {
+            "id" : 1,
+            "productName" : "Men's T-Shirt",
+            "productPrice" : 10000,
+            "productCategory" : "Men's Wear",
+            "productDescription" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci facere, ullam tenetur iure dolor magni distinctio eaque quae magnam, excepturi modi blanditiis aliquid repellat sapiente aspernatur sint sequi natus cupiditate.",
+            "productImage" : "https://media.istockphoto.com/id/864505242/photo/mens-clothing-and-personal-accessories.jpg?s=612x612&w=0&k=20&c=TaJuW3UY9IZMijRrj1IdJRwd6iWzXBlrZyQd1uyBzEY=",
+            "color" : "gray"
+        }
+    ]
+}

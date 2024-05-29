@@ -9,6 +9,7 @@ import Description from "./Pages/Description";
 import Product from "./Pages/Product";
 import AllProducts from "./Components/AllProducts";
 import FilteredProducts from "./Components/FilteredProducts";
+import MyProducts from "./Pages/MyProducts";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="filtered-product" element={<FilteredProducts />} />
         </Route>
         <Route path="/services/:id" element={<Description />} />
+
+        <Route path="/my-products" element={<MyProducts />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>
