@@ -19,3 +19,9 @@
 .parent:hover .dropContent {
   visibility: visible !important;
 }
+input {
+  border: 1px solid gray !important;
+}
+.border-st {
+  border: 2px solid red !important;
+}

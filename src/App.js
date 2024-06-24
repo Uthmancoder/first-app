@@ -11,6 +11,8 @@ import AllProducts from "./Components/AllProducts";
 import FilteredProducts from "./Components/FilteredProducts";
 import MyProducts from "./Pages/MyProducts";
 import AddProducts from "./Pages/AddProducts";
+import EditProducts from "./Pages/EditProducts";
+import SignUp from "./Pages/SignUp";
 
 const App = () => {
   return (
@@ -28,6 +30,8 @@ const App = () => {
 
         <Route path="/my-products" element={<MyProducts />} />
         <Route path="/add-product" element={<AddProducts />} />
+        <Route path="/edit/:id" element={<EditProducts />} />
+        <Route path="/sign-up" element={<SignUp />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

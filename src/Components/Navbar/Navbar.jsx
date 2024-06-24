@@ -1,7 +1,7 @@
 // import React from "react";
 import "./Navbar.css";
 import Button from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Internal Styling
 // const containerStyle = {
@@ -11,8 +11,9 @@ import { Link } from "react-router-dom";
 // };
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const clickMe = () => {
-    alert("Signup Button Clicked!");
+    navigate("/sign-up");
   };
   const handleLogin = () => {
     alert("Login Button Clicked!");

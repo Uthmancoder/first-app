@@ -21,6 +21,12 @@ const MyProducts = () => {
     navigate(`/edit/${id}`);
   };
 
+  const handleDeleteProd = async (id) => {
+    const deleteProd = axios.delete(`http://localhost:1234/AllProducts/${id}`);
+    console.log("Deleted Product : ", deleteProd);
+    navigate("/");
+  };
+
   return (
     <div>
       <Navbar />
@@ -48,7 +54,12 @@ const MyProducts = () => {
                   >
                     Edit
                   </button>
-                  <button className="btn btn-danger">Del</button>
+                  <button
+                    onClick={() => handleDeleteProd(data.id)}
+                    className="btn btn-danger"
+                  >
+                    Del
+                  </button>
                 </div>
               </div>
             ))
