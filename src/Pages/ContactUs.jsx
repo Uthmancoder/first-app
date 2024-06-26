@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
+import { useSelector } from "react-redux";
 
 const ContactUs = () => {
+  const { AllProducts } = useSelector((state) => state.AllProduct);
   return (
     <div>
       <Navbar />
@@ -44,6 +46,30 @@ const ContactUs = () => {
           sit officiis dolorem aliquam dolor? Maxime ratione consequuntur harum
           culpa ipsum magni, quos ipsa necessitatibus numquam cumque ex.
         </p>
+      </div>
+      <div className="row w-100 container-fluid mx-auto my-5">
+        {AllProducts.map((data) => (
+          <div key={data.id} className="col-11 col-md-6 col-lg-3">
+            <img
+              className="img-fluid w-100 h-50"
+              src={data.image || data.productImage}
+              alt=""
+            />
+            <h4>{data.productName}</h4>
+            <h5>#{data.productPrice}</h5>
+            <div className="d-flex align-items-center gap-2 justify-content-between ">
+              <button
+                // onClick={() => ViewMore(data.id)}
+                className="btn btn alert alert-success"
+              >
+                View More
+              </button>
+              <button className="btn btn alert alert-primary">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

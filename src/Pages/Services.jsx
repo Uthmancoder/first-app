@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import { products } from "../Components/server";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -9,14 +10,21 @@ const Services = () => {
     console.log("Id of procuct Clicked : ", id);
     navigate(`/services/${id}`);
   };
+
+  const { AllProducts } = useSelector((state) => state.AllProduct);
+  console.log("Received Product :", AllProducts);
   return (
     <div>
       <Navbar />
 
       <div className="row w-100 container-fluid mx-auto my-5">
-        {products.map((data) => (
+        {AllProducts.map((data) => (
           <div key={data.id} className="col-11 col-md-6 col-lg-3">
-            <img className="img-fluid w-100 h-50" src={data.image} alt="" />
+            <img
+              className="img-fluid w-100 h-50"
+              src={data.image || data.productImage}
+              alt=""
+            />
             <h4>{data.productName}</h4>
             <h5>#{data.productPrice}</h5>
             <div className="d-flex align-items-center gap-2 justify-content-between ">

@@ -3,6 +3,8 @@ import TextComponent from "../Components/TextComponent";
 import ImageCompo from "../Components/ImageCompo";
 import Card from "../Components/Card";
 import Navbar from "../Components/Navbar/Navbar";
+import { useSelector, useDispatch } from "react-redux";
+import { IncreaseCount } from "../Redux/ProductCount";
 
 const Hero = () => {
   const cardInfo = [
@@ -31,6 +33,18 @@ const Hero = () => {
       contactUs: "Contact Us",
     },
   ];
+  const dispatch = useDispatch();
+
+  // const productCount = useSelector((state) => state.ProductCount.productCount);
+  // console.log("Product Count : ", productCount);
+
+  const AllProduct = useSelector((state) => state.AllProduct.AllProducts);
+  console.log("All Product from Home : ", AllProduct);
+
+  const handleIncrease = () => {
+    dispatch(IncreaseCount());
+  };
+
   return (
     <div>
       <Navbar />
@@ -42,6 +56,10 @@ const Hero = () => {
           <ImageCompo />
         </div>
       </div>
+
+      <button onClick={handleIncrease} className="btn btn-success ">
+        Increase Product Count
+      </button>
 
       <div className="row w-100 container mx-auto">
         {cardInfo.map((data) => (

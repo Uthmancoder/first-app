@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { FetchProducts } from "../Redux/AllProduct";
+import { useDispatch } from "react-redux";
 
 const MyProducts = () => {
   const [products, setProducts] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await axios.get("http://localhost:1234/AllProducts");
       console.log(response.data);
       setProducts(response.data);
+      dispatch(FetchProducts(response.data));
     };
     fetchProducts();
   }, []);
